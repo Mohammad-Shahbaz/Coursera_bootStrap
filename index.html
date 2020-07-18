@@ -47,8 +47,11 @@
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our
                         lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm align-self-center">
+                <div class="col-3 col-sm align-self-center">
                     <img src="img/logo.png" class="img-fluid">
+                </div>
+                <div class="col-3 align-self-center ">
+                    <button class="btn btn-warning mt-5 ml-5" onclick="window.location='#reserve'; event.stopImmediatePropagation()">Reserve Table</button>
                 </div>
             </div>
         </div>
@@ -61,12 +64,14 @@
             </div>
             <div class="col col-sm order-sm-first col-md">
                 <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center"
-                    src="img/uthappizza.png" alt="uthappizza">
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png" alt="uthappizza">
                     <div class="media-body">
-                        <h2 class="mt-0">Uthappizza<span class="badge badge-danger ml-1">Hot</span><span class="badge badge-pill badge-secondary ml-1">Rs420</span></h2>
-                        <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped
-                            with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.
+                        <h2 class="mt-0">Uthappizza<span class="badge badge-danger ml-1">Hot</span><span
+                                class="badge badge-pill badge-secondary ml-1">Rs420</span></h2>
+                        <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian
+                            pizza, topped
+                            with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo
+                            Paneer.
                         </p>
                     </div>
                 </div>
@@ -80,11 +85,12 @@
                 <h3>This Month's Promotions</h3>
             </div>
             <div class="col col-sm col-md">
-                <h2>Weekend Grand Buffet</h2>
+                <h2>Weekend Grand Buffet<span class="badge badge-danger ml-1">New</span></h2>
                 <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different
                     salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly
                     and soft drinks. All for just $19.99 per person </p>
             </div>
+            <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/buffet.png" alt="alberto">
         </div>
 
         <div class="row row-content align-items-center">
@@ -93,19 +99,71 @@
             </div>
             <div class="col col-sm order-sm-first col-md">
                 <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center"
-                    src="img/alberto.png" alt="alberto">
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/alberto.png" alt="alberto">
                     <div class="media-body">
                         <h2 class="mt-0">Alberto Somayya</h2>
                         <h4>Executive Chef</h4>
-                        <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience
-                            having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering
+                        <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International
+                            experience
+                            having worked closely with whos-who in the culinary world, he specializes in creating
+                            mouthwatering
                             Indo-Italian fusion experiences. </p>
                     </div>
                 </div>
 
             </div>
         </div>
+        <div class="col-12 col-sm-6 offset-2 mt-4 mb-4" id="reserve">
+            <div class="card">
+                <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-4"><label>Number of guests</label></dt>
+                        <dd class="col-1"><label class="radio-inline"><input type="radio" name="optradio" checked>1</label></dd>
+                        <dd class="col-1"><label class="radio-inline"><input type="radio" name="optradio" checked>2</label></dd>
+                        <dd class="col-1"><label class="radio-inline"><input type="radio" name="optradio" checked>3</label></dd>
+                        <dd class="col-1"><label class="radio-inline"><input type="radio" name="optradio" checked>4</label></dd>
+                        <dd class="col-1"><label class="radio-inline"><input type="radio" name="optradio" checked>5</label></dd>
+                        <dd class="col-1"><label class="radio-inline"><input type="radio" name="optradio" checked>6</label></dd>
+                    </dl>
+
+                    <dl class="row">
+                        <dt class="col-4"><label>Date and Time</label></dt>
+                        <div class="col-4">
+                            <input class="form-control" id="date" placeholder="Date"
+                                name="date">
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control" id="time" placeholder="Time"
+                                name="time">
+                        </div>
+                        <div class="col-4 offset-4 mt-4">
+                            <button class="btn btn-primary" id="time" 
+                                name="reserve">Reserve</button>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-6 col-sm-6 offset-2">
+                <div class="card">
+                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
+                    <div class="card-body ">
+                        <dl class="row">
+                            <dt class="col-4 col-sm-6">Number of Guests</dt>
+                            <dd ></dd>
+                            <dd ><label class="radio-inline"><input type="radio" name="optradio">2</label></dd>
+                            <dd ><label class="radio-inline"><input type="radio" name="optradio">3</label></dd>
+                            <dd ><label class="radio-inline"><input type="radio" name="optradio">4</label></dd>   
+                            <dd ><label class="radio-inline"><input type="radio" name="optradio">5</label></dd>
+                            <dd ><label class="radio-inline"><input type="radio" name="optradio">6</label></dd>                        
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+        </div> -->
     </div>
 
     <footer class="footer">

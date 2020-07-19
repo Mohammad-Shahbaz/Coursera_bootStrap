@@ -34,10 +34,49 @@
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><span
                                 class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
+
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"> Login</span>
+                    </a>
+                </span>
             </div>
 
         </div>
     </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <form class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <input class="form-control" type="text" placeholder="Username">
+                            </div>
+                            <div class="col-6">
+                                <input class="form-control" type="text" placeholder="Password">
+                            </div>
+                            <div class="col- offset-8 mt-2">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> 
+                            </div>
+                            <div class="col-2 mt-2">
+                                <button type="submit" class="btn btn-primary">Sign In</button>
+                            </div>    
+                            
+                        </div>
+                    </form>
+                </div>
+            </div> 
+        </div>
+    </div> 
 
     <header class="jumbotron">
         <div class="container">
@@ -50,8 +89,10 @@
                 <div class="col-3 col-sm align-self-center">
                     <img src="img/logo.png" class="img-fluid">
                 </div>
-                <div class="col-3 align-self-center ">
-                    <button class="btn btn-warning mt-5 ml-5" onclick="window.location='#reserve'; event.stopImmediatePropagation()">Reserve Table</button>
+                <div class="col-12 col-sm align-self-center ">
+                    <button role="button" class="btn btn-block nav-link btn-warning" onclick="window.location='#reserve'; event.stopImmediatePropagation()"
+                        data-toggle="tooltip" data-html="true" title="or call us at +91 1234567890" data-placement="bottom"
+                    >Reserve Table</button>
                 </div>
             </div>
         </div>
@@ -145,25 +186,7 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="row">
-            <div class="col-6 col-sm-6 offset-2">
-                <div class="card">
-                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-                    <div class="card-body ">
-                        <dl class="row">
-                            <dt class="col-4 col-sm-6">Number of Guests</dt>
-                            <dd ></dd>
-                            <dd ><label class="radio-inline"><input type="radio" name="optradio">2</label></dd>
-                            <dd ><label class="radio-inline"><input type="radio" name="optradio">3</label></dd>
-                            <dd ><label class="radio-inline"><input type="radio" name="optradio">4</label></dd>   
-                            <dd ><label class="radio-inline"><input type="radio" name="optradio">5</label></dd>
-                            <dd ><label class="radio-inline"><input type="radio" name="optradio">6</label></dd>                        
-                        </dl>
-                    </div>
-                </div>
-            </div>
 
-        </div> -->
     </div>
 
     <footer class="footer">
@@ -216,6 +239,11 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tootltip"]').tooltip();
+        });
+    </script>
 
 </body>
 

@@ -36,7 +36,7 @@
                 </ul>
 
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a data-toggle="modal" id="loginBtn">
                         <span class="fa fa-sign-in"> Login</span>
                     </a>
                 </span>
@@ -48,28 +48,35 @@
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                <div class="modal-header" style="background-color: #512DA8;">
+                    <h4 class="modal-title" style="color: floralwhite;">Login</h4>
+                    <button style="color: floralwhite;" type="button" class="close" data-dismiss="modal">
                         &times;
                     </button>
                 </div>
 
-                <div class="modal-body">
+                <div class="modal-body" style="background-color: #D1C4E9;">
                     <form class="container">
                         <div class="row">
-                            <div class="col-6">
-                                <input class="form-control" type="text" placeholder="Username">
+                            <div class="col-4">
+                                <input class="form-control" type="text" placeholder="Enter email">
                             </div>
-                            <div class="col-6">
+                            <div class="col-4">
                                 <input class="form-control" type="text" placeholder="Password">
                             </div>
-                            <div class="col- offset-8 mt-2">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <div class="col-4">
+                                <input type="checkbox" name="checkbox" value="checkbox">
+                                 <label for="checkbox">Remember me</label>
                             </div>
-                            <div class="col-2 mt-2">
-                                <button type="submit" class="btn btn-primary">Sign In</button>
+                            <div class="row offset-8">
+                                <div class="col-sm-4 mr-2 mt-2">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                </div>
+                                <div class="col-sm-6  mt-2">
+                                    <button type="submit" class="btn btn-primary">Sign in</button>
+                                </div>
                             </div>
+                            
 
                         </div>
                     </form>
@@ -81,15 +88,15 @@
     <div id="reserveTable" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
-                <form class="form-control">
-                    <div class="modal-header row">
-                        <h3>Reserve a Table</h3>
-                        <button type="button" class="close" data-dismiss="modal">
-                            &times;
-                        </button>
-                    </div>
+                <div class="modal-header" style="background-color: #512DA8;">
+                    <h4 class="modal-title" style="color: floralwhite;">Reserve a Table</h4>
+                    <button style="color: floralwhite;" type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
 
-                    <div class="modal-body">
+                <div class="modal-body" style="background-color: #D1C4E9;">
+                <form class="container">
                         <div id="reserve">
                             <dl class="row">
                                 <dt class="col-2"><label>Number of guests</label></dt>
@@ -163,7 +170,7 @@
                 </div>
                 <div class="col-12 col-sm align-self-center ">
                     <button type="button" class="btn btn-block nav-link btn-warning" data-toggle="modal"
-                        data-target="#reserveTable">Reserve Table</button>
+                        id="reservemodalbtn">Reserve Table</button>
                 </div>
             </div>
         </div>
@@ -393,6 +400,16 @@
                 }
             });
                 
+        })
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('#reservemodalbtn').click(function(){
+                $('#reserveTable').modal();
+            });
+            $('#loginBtn').click(function(){
+                $('#loginModal').modal();
+            })
         })
     </script>
 </body>
